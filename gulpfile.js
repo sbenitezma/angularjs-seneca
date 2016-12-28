@@ -39,22 +39,11 @@ gulp.task('images', function() {
 
 // browser-sync task, only cares about compiled CSS
 gulp.task('browser-sync', function() {
-  browserSync.init({
+  browserSync({
     server: {
       baseDir: "./"
     }
   });
-  browserSync({
-    snippetOptions: {
-      rule: {
-        match: /<\/head>/i,
-        fn: function (snippet, match) {
-          return snippet + match;
-        }
-      }
-    }
-  });
-
 });
 
 // minify JS
