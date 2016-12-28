@@ -1,8 +1,8 @@
 {
-  "name": "angularjs-boilerplate",
-  "version": "1.1.7",
+  "name": "angularjs-seneca",
+  "version": "0.0.1",
   "license": "MIT",
-  "description": "Simple AngularJS Boilerplate to kick start your new project with SASS support and Gulp watch/build tasks",
+  "description": "Simple AngularJS project based in customized Boilerplate for a company webpage",
   "main": "app/app.js",
   "devDependencies": {
     "browser-sync": "^1.9.1",
@@ -41,21 +41,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/jbutko/AngularJS-Boilerplate.git"
+    "url": "https://github.com/sbenitezma/angularjs-seneca.git"
   },
-  "keywords": [
-    "angular",
-    "angularjs",
-    "boilerplate",
-    "front-end",
-    "app",
-    "single-page",
-    "spa"
-  ],
-  "author": "Jozef Butko",
-  "docs": "https://github.com/jbutko/AngularJS-Boilerplate/blob/master/README.md",
-  "bugs": {
-    "url": "https://github.com/jbutko/AngularJS-Boilerplate/issues"
-  },
-  "homepage": "https://github.com/jbutko/AngularJS-Boilerplate"
+  "author": "Sonia Benitez",
+  "docs": "https://github.com/sbenitezma/angularjs-seneca/blob/master/README.md",
+  "homepage": "https://github.com/sbenitezma/angularjs-seneca"
 }
