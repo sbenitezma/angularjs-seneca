@@ -1,0 +1,23 @@
+{
+  "name": "AngularJS base project with custom boilerplate",
+  "version": "0.0.1",
+  "authors": [
+    "sonia benitez"
+  ],
+  "description": "Description goes here",
+  "private": false,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angularjs-boilerplate": "~1.1.7",
+    "angular": "~1.3.13",
+    "angular-route": "~1.3.13",
+    "angular-sanitize": "~1.3.13",
+    "OwlCarousel": "https://github.com/OwlFonk/OwlCarousel.git#~1.3.2"
+  }
+}
