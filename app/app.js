@@ -17,13 +17,13 @@
    */
   angular
     .module('boilerplate', [
-      'ngRoute'
+      'ui.router'
     ])
     .config(config);
 
   // safe dependency injection
   // this prevents minification issues
-  config.$inject = ['$routeProvider', '$locationProvider', '$httpProvider', '$compileProvider'];
+  config.$inject = ['$stateProvider', '$urlRouterProvider', '$httpProvider', '$compileProvider'];
 
   /**
    * App routing
@@ -32,30 +32,27 @@
    * into separate file
    * 
    */
-  function config($routeProvider, $locationProvider, $httpProvider, $compileProvider) {
+  function config($stateProvider, $urlRouterProvider, $httpProvider, $compileProvider) {
 
-    $locationProvider.html5Mode(false);
+    $urlRouterProvider.otherwise("/home");
 
-    // routes
-    $routeProvider
-      .when('/', {
-        templateUrl: 'views/home.html',
-        controller: 'MainController',
-        controllerAs: 'main'
-      })
-      .when('/contact', {
-        templateUrl: 'views/contact.html',
-        controller: 'MainController',
-        controllerAs: 'main'
-      })
-      .when('/setup', {
-        templateUrl: 'views/setup.html',
-        controller: 'MainController',
-        controllerAs: 'main'
-      })
-      .otherwise({
-        redirectTo: '/'
-      });
+    $stateProvider
+        .state('home', {
+          url: "/home",
+          templateUrl: "views/home.html"
+        })
+        .state('services', {
+          url: "/services",
+          templateUrl: "views/services.html",
+        })
+        .state('products', {
+          url: "/products",
+          templateUrl: "views/products.html"
+        })
+        .state('shops', {
+          url: "/shops",
+          templateUrl: "views/shops.html"
+        });
 
     $httpProvider.interceptors.push('authInterceptor');
 
